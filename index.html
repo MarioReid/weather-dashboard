@@ -44,8 +44,18 @@
         //DOM VARIABLE
 
         //JAVASCRIPT VARIABLES
-        var cityArray = [""];
+        var cityArray = [];
         //FUNCTION DEFINITIONS
+
+
+        function init(){
+            var citiesFromStorage = JSON.parse(localStorage.getItem("cityArray"));
+                if(citiesFromStorage !== null){
+                    cityArray = citiesFromStorage
+                }
+                renderButtons();
+        }
+
         function renderButtons() {
           $("#buttons-display").empty();
           for (var i = 0; i < cityArray.length; i++) {
@@ -57,8 +67,8 @@
         }
 
         //FUNCTION CALLS
-
-        renderButtons();
+        init();
+    
         //EVENT LISTENERS
         $("#city-form").on("submit", function (e) {
           e.preventDefault();
