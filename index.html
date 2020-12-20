@@ -28,15 +28,15 @@
         <div class="col-sm-4">
           <form id="city-form">
             <div class="mb-3">
-              <label for="city-name" class="form-label">Search for a City:</label>
+              <label for="city-name" class="form-label"
+                >Search for a City:</label
+              >
               <input type="text" class="form-label" id="city-name" />
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
         </div>
-        <div class="col-sm-4" id="buttons-display">
-          <button class="btn btn-info">The muppet</button>
-        </div>
+        <div class="col-sm-4" id="buttons-display"></div>
       </div>
     </div>
     <script type="text/javascript">
@@ -44,15 +44,28 @@
         //DOM VARIABLE
 
         //JAVASCRIPT VARIABLES
-        var weatherArray = [];
+        var cityArray = [""];
         //FUNCTION DEFINITIONS
+        function renderButtons() {
+          $("#buttons-display").empty();
+          for (var i = 0; i < cityArray.length; i++) {
+            var button = $("<button>")
+              .addClass("btn btn-info")
+              .text(cityArray[i]);
+            $("#buttons-display").append(button);
+          }
+        }
 
         //FUNCTION CALLS
 
+        renderButtons();
         //EVENT LISTENERS
         $("#city-form").on("submit", function (e) {
           e.preventDefault();
           console.log("You submitted the form");
+          var newCity = $("#city-name").val();
+          cityArray.push(newCity);
+          renderButtons();
         });
       });
     </script>
