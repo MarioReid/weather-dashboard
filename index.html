@@ -65,6 +65,7 @@
           console.log("You submitted the form");
           var newCity = $("#city-name").val();
           cityArray.push(newCity);
+          localStorage.setItem("cityArray", JSON.stringify(cityArray));
           renderButtons();
         });
       });
