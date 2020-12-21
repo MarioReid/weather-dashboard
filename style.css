@@ -4,3 +4,6 @@
     color: white
 } */
 
+#container {
+    max-width: 1800;
+}
