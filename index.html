@@ -49,39 +49,39 @@
       $(document).ready(function () {
         //DOM VARIABLE
 
-        //JAVASCRIPT VARIABLES
-        var cityArray = [];
-        //FUNCTION DEFINITIONS
+        // //JAVASCRIPT VARIABLES
+        // var cityArray = [];
+        // //FUNCTION DEFINITIONS
 
-        function init() {
-          var citiesFromStorage = JSON.parse(localStorage.getItem("cityArray"));
-          if (citiesFromStorage !== null) {
-            cityArray = citiesFromStorage;
-          }
-          renderButtons();
-        }
+        // function init() {
+        //   var citiesFromStorage = JSON.parse(localStorage.getItem("cityArray"));
+        //   if (citiesFromStorage !== null) {
+        //     cityArray = citiesFromStorage;
+        //   }
+        //   renderButtons();
+        // }
 
-        function renderButtons() {
-          $("#buttons-display").empty();
-          for (var i = 0; i < cityArray.length; i++) {
-            var button = $("<button>")
-              .addClass("btn btn-info")
-              .text(cityArray[i]);
-            $("#buttons-display").append(button);
-          }
-        }
+        // function renderButtons() {
+        //   $("#buttons-display").empty();
+        //   for (var i = 0; i < cityArray.length; i++) {
+        //     var button = $("<button>")
+        //       .addClass("btn btn-info")
+        //       .text(cityArray[i]);
+        //     $("#buttons-display").append(button);
+        //   }
+        // }
 
-        //FUNCTION CALLS
-        init();
-        $().prepend()
-        //EVENT LISTENERS
-        $("#city-form").on("submit", function (e) {
-          e.preventDefault();
-          console.log("You submitted the form");
-          var newCity = $("#city-name").val();
-          cityArray.push(newCity);
-          localStorage.setItem("cityArray", JSON.stringify(cityArray));
-          renderButtons();
+        // //FUNCTION CALLS
+        // init();
+        // $().prepend()
+        // //EVENT LISTENERS
+        // $("#city-form").on("submit", function (e) {
+        //   e.preventDefault();
+        //   console.log("You submitted the form");
+        //   var newCity = $("#city-name").val();
+        //   cityArray.push(newCity);
+        //   localStorage.setItem("cityArray", JSON.stringify(cityArray));
+        //   renderButtons();
 
           //AJAX CALL
 
