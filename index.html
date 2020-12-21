@@ -84,12 +84,30 @@
           renderButtons();
 
           //AJAX CALL
+
+
+          //var newRow=$("<tr>");
+          //var titleTd = $("<td>").text(response.Title);
+          //newRow.append(titleTd)
+          
+        <div class ="city"></div>
+        <div class ="temp"></div>
+        <div class ="humidity"></div>
+        <div class ="wind"></div>
+        <div class ="temp"></div>
+ 
+          
+          var APIKey = "cebf12f8e299937f0d7bd19ab1e7f12d";
+
+          var queryURL = "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=" + APIKey;
+
           $.ajax({
-            url:
+            url:queryURL,
             method:"GET"
           }).then(function(response){
             console.log(response);
-            console.log(response.runtime)
+            console.log(queryURL);
+            $("city").text()
           })
 
 
