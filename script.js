@@ -97,16 +97,25 @@ $(document).ready(function () {
             $('#day1-temp').text(day1Data.main.temp);
             $('#day1-humidity').text(day1Data.main.humidity);
 
-
             var day2Data = response3.list[8];
+            $('#day2-date').text(moment.unix(day2Data.dt).format('MM/DD/YYYY'));
+            $('#day2-temp').text(day2Data.main.temp);
+            $('#day2-humidity').text(day2Data.main.humidity);
 
-
-            
             var day3Data = response3.list[16];
+            $('#day3-date').text(moment.unix(day3Data.dt).format('MM/DD/YYYY'));
+            $('#day3-temp').text(day3Data.main.temp);
+            $('#day3-humidity').text(day3Data.main.humidity);
+
             var day4Data = response3.list[24];
+            $('#day4-date').text(moment.unix(day4Data.dt).format('MM/DD/YYYY'));
+            $('#day4-temp').text(day4Data.main.temp);
+            $('#day4-humidity').text(day4Data.main.humidity);
+
             var day5Data = response3.list[32];
-
-
+            $('#day5-date').text(moment.unix(day5Data.dt).format('MM/DD/YYYY'));
+            $('#day5-temp').text(day5Data.main.temp);
+            $('#day5-humidity').text(day5Data.main.humidity);
 
             console.log(day1Data);
           })
