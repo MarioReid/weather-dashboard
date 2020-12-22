@@ -91,16 +91,17 @@ $(document).ready(function () {
             url: queryURL3,
             method: "GET"
           }).then(function(response3) {
+
             var day1Data = response3.list[0];
-
             $('#day1-date').text(moment.unix(day1Data.dt).format('MM/DD/YYYY'));
-
             $('#day1-temp').text(day1Data.main.temp);
-
             $('#day1-humidity').text(day1Data.main.humidity);
 
 
             var day2Data = response3.list[8];
+
+
+            
             var day3Data = response3.list[16];
             var day4Data = response3.list[24];
             var day5Data = response3.list[32];
