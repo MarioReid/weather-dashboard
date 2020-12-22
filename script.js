@@ -1,9 +1,13 @@
-
-      $(document).ready(function () {
+$(document).ready(function () {
         //DOM VARIABLE
 
         //JAVASCRIPT VARIABLES
         var cityArray = [];
+        var cityNameEL = $("#city-name2");
+        var tempEL = $("#temperature");
+        var humidityEL = $("#humidity");
+        var windSpeedEL = $("#wind-speed");
+        var uvIndexEL = $("#UV-index");
         //FUNCTION DEFINITIONS
 
         function init() {
@@ -25,13 +29,14 @@
         }
 
         //FUNCTION CALLS
-        
+        init();
         $().prepend()
         //EVENT LISTENERS
         $("#city-form").on("submit", function (e) {
           e.preventDefault();
           console.log("You submitted the form");
           var newCity = $("#city-name").val();
+
           cityArray.push(newCity);
           localStorage.setItem("cityArray", JSON.stringify(cityArray));
           renderButtons();
@@ -54,9 +59,14 @@
           }).then(function(response){
             console.log(response);
             console.log(queryURL);
-            $("city").text()
+            // $("city").text()
+
+            cityNameEL.text(response.name)
+            tempEL.text(response.main.temp)
+            humidityEL.text(response.main.humidity)
+            windSpeedEL.text(response.wind.speed)
           })
 
-          init();
+         
         });
       });
