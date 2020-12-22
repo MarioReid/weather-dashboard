@@ -40,27 +40,20 @@ $(document).ready(function () {
           cityArray.push(newCity);
           localStorage.setItem("cityArray", JSON.stringify(cityArray));
           renderButtons();
-
-          //AJAX CALL
-
-
-          //var newRow=$("<tr>");
-          //var titleTd = $("<td>").text(response.Title);
-          //newRow.append(titleTd)
           
           var APIKey = "cebf12f8e299937f0d7bd19ab1e7f12d";
-
+          //current weather
           var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + newCity + "&appid=" + APIKey;
             console.log(queryURL);
-
+          //AJAX Call
           $.ajax({
             url:queryURL,
             method:"GET"
           }).then(function(response){
             console.log(response);
             console.log(queryURL);
-            // $("city").text()
-
+            
+            //UV Index
           var queryURL2 = "https://api.openweathermap.org/data/2.5/uvi?lat=" + response.coord.lat + "&lon=" + response.coord.lon + "&appid=" + APIKey;
 
             $.ajax({
@@ -70,7 +63,7 @@ $(document).ready(function () {
 
 
               console.log(response2);
-
+              //current weather for city
               var currentDate=moment().format('MM/DD/YYYY')
               cityNameEL.text(response.name + ' (' + currentDate + ')')
               var tempF = Math.round((((response.main.temp-273.15)*1.8)+32)*100)/100;
@@ -117,7 +110,8 @@ $(document).ready(function () {
             $('#day5-temp').text(day5Data.main.temp);
             $('#day5-humidity').text(day5Data.main.humidity);
 
-            console.log(day1Data);
+            // console.log(day1Data);
+
           })
 
 

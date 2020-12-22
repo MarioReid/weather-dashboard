@@ -9,7 +9,7 @@ This project was one to use and API and have the user input a city to determine 
 Open webpage using browser of your choice.
 
 ## Images
-<img src = "" alt = "main page">
+<img src = "WeatherDashboard.png" alt = "main page">
 
 ## Built With
 *HTML
