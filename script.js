@@ -61,10 +61,13 @@ $(document).ready(function () {
             console.log(queryURL);
             // $("city").text()
 
+            var currentDate=moment()
             cityNameEL.text(response.name)
-            tempEL.text(response.main.temp)
+            var tempF = ((response.main.temp-273.15)*1.8)+32
+            tempEL.text(tempF)
             humidityEL.text(response.main.humidity)
             windSpeedEL.text(response.wind.speed)
+
           })
 
          
