@@ -25,7 +25,7 @@
         }
 
         //FUNCTION CALLS
-        init();
+        
         $().prepend()
         //EVENT LISTENERS
         $("#city-form").on("submit", function (e) {
@@ -57,6 +57,6 @@
             $("city").text()
           })
 
-
+          init();
         });
       });

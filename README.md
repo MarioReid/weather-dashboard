@@ -1,10 +1,10 @@
 # Weather Dashboard
 
 ## Description
-This project was one to use and API and have the user input a city to determine current weather as well as a 5-day forecast for this city. 
+This project was one to use and API and have the user input a city to determine current weather as well as a 5-day forecast for the selected city. 
 
 ## Website
-<a href=""> Click here to visit my deployed project.</a>
+<a href="https://marioreid.github.io/weather-dashboard/"> Click here to visit my deployed project.</a>
 ## Installation
 Open webpage using browser of your choice.
 
