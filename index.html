@@ -38,7 +38,7 @@
       <div class="col-8">
         <div class="row mr-0"></div>
             <div class="col-12 border border-dark m-3 rounded">
-                <div class="row">
+                <div id="city-row" class="row">
                     <div class="col-12">
                         <span id="city-name2" class="city-name2 align-middle"></span>
                         <img id="current-pic" src="" alt="">
@@ -68,15 +68,20 @@
             </div>
             <div class="col-12">
               <h3>5-Day Forecast:</h3>
+              <div class="row">
+                <div id="day1" class="col forecast bg-primary text-white ml-3 mb-3 rounded">
+                  <p id="day1-date"></p>
+                  <p id="day1-temp"></p>
+                  <p id="day1-humidity"></p>
+                </div>
+                <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+            </div>
         </div>
         </div>
-        <div class="row">
-            <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-            <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-            <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-            <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-            <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-        </div>
+        
         </div>
       </div>
   </div>
